@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:raiv="http://schemas.android.com/apk/res/com.imbase"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center_vertical"
+    android:padding="@dimen/dp_10" >
+
+    <com.kjstudy.plugin.RoundAngleImageView
+        android:id="@+id/iv_head_left"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:background="@android:color/black"
+        raiv:angle="90" />
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_toRightOf="@+id/iv_head_left"
+        android:layout_toLeftOf="@+id/iv_head_right"
+        android:background="@drawable/shape_im_bg"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <com.kjstudy.plugin.RoundAngleImageView
+        android:id="@+id/iv_head_right"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@android:color/black"
+        raiv:angle="90" />
+
+</RelativeLayout>

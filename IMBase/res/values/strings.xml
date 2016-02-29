@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KjStudy</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="empty_data">暂无数据</string>
+
+    <!-- login.xml -->
+    <string name="tips_name">注册的邮箱</string>
+    <string name="tips_account">账号</string>
+    <string name="tips_phone">手机号</string>
+    <string name="verify_code">验证码</string>
+    <string name="tips_pwd">密码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="verify">验证</string>
+    <string name="tips_var">填写提示语</string>
+
+</resources>

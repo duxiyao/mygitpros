@@ -1,0 +1,52 @@
+
+		mBitmaps[0] = BitmapFactory.decodeResource(getResources(),
+				R.drawable.man_front);
+		mBitmaps[1] = BitmapFactory.decodeResource(getResources(),
+				R.drawable.head);
+		mBitmaps[2] = BitmapFactory.decodeResource(getResources(),
+				R.drawable.neck);
+		mBitmaps[3] = BitmapFactory.decodeResource(getResources(),
+				R.drawable.chest);
+		mBitmaps[4] = BitmapFactory.decodeResource(getResources(),
+				R.drawable.arm);
+		mBitmaps[5] = BitmapFactory.decodeResource(getResources(),
+				R.drawable.hand);
+		mBitmaps[6] = BitmapFactory.decodeResource(getResources(),
+				R.drawable.abdomen);
+		mBitmaps[7] = BitmapFactory.decodeResource(getResources(),
+				R.drawable.genitals);
+		mBitmaps[8] = BitmapFactory.decodeResource(getResources(),
+				R.drawable.leg);
+		mBitmaps[9] = BitmapFactory.decodeResource(getResources(),
+				R.drawable.foot);
+				
+				
+
+	// try {
+	// JsonReader reader = new JsonReader(new StringReader(json));
+	// while (reader.hasNext()) {
+	// reader.beginObject();
+	// while (reader.hasNext()) {
+	// String tagName = reader.nextName();
+	// if (tagName.equals("code")) {
+	// } else if (tagName.equals("exception")) {
+	// } else if (tagName.equals("identity ")) {
+	// mConsultInfo.setIdentity(reader.nextString());
+	// } else if (tagName.equals("name")) {
+	// mConsultInfo.setName(reader.nextString());
+	// } else if (tagName.equals("phone")) {
+	// mConsultInfo.setPhone(reader.nextString());
+	// } else if (tagName.equals("voipid")) {
+	// mConsultInfo.setVoipId(reader.nextString());
+	// } else if (tagName.equals("idcard")) {
+	// mConsultInfo.setIdCard(reader.nextString());
+	// } else if (tagName.equals("status")) {
+	// mConsultInfo.setStatus(reader.nextString());
+	// }
+	// }
+	//
+	// reader.endObject();
+	// }
+	// } catch (Exception e) {
+	// e.printStackTrace();
+	// }

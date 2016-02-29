@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/actionbar_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/actionbar_back"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_two" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="设置手势密码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_s_20" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_bar"
+        android:layout_marginTop="@dimen/dp_50"
+        android:gravity="center"
+        android:text="请输入密码" />
+
+    <FrameLayout
+        android:id="@+id/fl_gesture_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tips"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_70"
+        android:background="@color/black"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_forgot_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="@dimen/dp_20"
+                android:text="忘记密码" />
+
+            <TextView
+                android:id="@+id/tv_update_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/dp_20"
+                android:text="修改密码" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>
