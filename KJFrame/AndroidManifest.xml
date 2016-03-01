@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.kymjs.kjframe"
+    package="org.myframe"
     android:versionCode="222"
     android:versionName="2.227" >
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="14" />
 
     <application
         android:allowBackup="true" />
