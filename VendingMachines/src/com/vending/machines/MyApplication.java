@@ -1,5 +1,6 @@
 package com.vending.machines;
 
+import cn.jpush.android.api.JPushInterface;
 import android.app.Application;
 import android.content.res.Configuration;
 
@@ -15,6 +16,8 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         mInstance = this;
+        JPushInterface.setDebugMode(false);
+        JPushInterface.init(this);
     }
 
     @Override

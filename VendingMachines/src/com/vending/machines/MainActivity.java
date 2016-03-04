@@ -4,6 +4,8 @@ import org.myframe.MActivity;
 import org.myframe.https.HttpsCb;
 import org.myframe.https.HttpsClient;
 
+import com.vending.machines.util.Dwin;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,6 +23,8 @@ public class MainActivity extends MActivity {
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		super.onCreate(savedInstanceState);
+//		Dwin.getInstance().hideNavigation();
+		Dwin.getInstance().showNavigation();
 		// new Thread(new Runnable() {
 		//
 		// @Override
