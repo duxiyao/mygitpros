@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
+encoding//src/com/dwin/dwinapi/SerialPort.java=GBK
+encoding//src/com/dwin/navy/serialportapi/SerailPortOpt.java=GBK
+encoding//src/com/dwin/navy/serialportapi/SerialPortJNI.java=GBK
 encoding//src/com/vending/machines/util/Dwin.java=GBK
 encoding/<project>=UTF-8
