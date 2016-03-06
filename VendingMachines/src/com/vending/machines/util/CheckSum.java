@@ -1,14 +1,11 @@
 package com.vending.machines.util;
 
+import java.util.List;
+
+import org.myframe.utils.MLoger;
+
 public class CheckSum {
 
-	/**
-	 * ����16�����ۼӺ�У����
-	 * 
-	 * @param data
-	 *            ��ȥУ��λ������
-	 * @return
-	 */
 	public static String makeChecksum(String data) {
 		if (isEmpty(data)) {
 			return "";
@@ -22,28 +19,15 @@ public class CheckSum {
 			total += Integer.parseInt(s, 16);
 			num = num + 2;
 		}
-		/**
-		 * ��256���������255����16���Ƶ�FF
-		 */
 		int mod = total % 256;
 		String hex = Integer.toHexString(mod);
 		len = hex.length();
-		// �������У��λ�ĳ��ȣ���0,�����õ�����λУ��
 		if (len < 2) {
 			hex = "0" + hex;
 		}
 		return hex;
 	}
 
-	/**
-	 * 16�����ۼӺ�У��
-	 * 
-	 * @param data
-	 *            ��ȥУ��λ������
-	 * @param sign
-	 *            У��λ������
-	 * @return
-	 */
 	public static boolean checkChecksum(String data, String sign) {
 		// String
 		// sourceData="0100150aa303b101b201b301b404b504b601b904ba03be0140";
@@ -61,6 +45,22 @@ public class CheckSum {
 		}
 	}
 
+	public static boolean checkPkg(String[] datas) {
+		if (datas == null || datas.length == 0 || datas.length < 3)
+			return false;
+		if (!"AA55".equals(datas[0] + datas[1]))
+			return false;
+		int len = datas.length;
+		if (!"55AA".equals(datas[len - 2] + datas[len - 1]))
+			return false;
+		String s = "";
+		for (int i = 0; i < datas.length - 3; i++) {
+			s += datas[i];
+		}
+		String sign = datas[datas.length - 3];
+		return checkChecksum(s, sign);
+	}
+
 	static boolean isEmpty(String s) {
 		return s == null || s.trim().length() == 0;
 	}
@@ -68,6 +68,6 @@ public class CheckSum {
 	public static void main(String[] args) {
 		String data = "0102030405060708";
 		System.out.println(makeChecksum(data));
-		System.out.println(checkChecksum(data,"24"));
+		System.out.println(checkChecksum(data, "24"));
 	}
 }

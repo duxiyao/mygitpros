@@ -26,9 +26,7 @@ import android.view.View;
  * @author kymjs (https://github.com/kymjs)
  * @version 1.0
  */
-public interface I_KJActivity {
-    /** 设置root界面 */
-    void setRootView();
+public interface I_KJActivity { 
 
     /** 初始化数据 */
     void initData();

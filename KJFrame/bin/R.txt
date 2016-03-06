@@ -1,0 +1,4 @@
+int dimen dp_60 0x7f030000
+int id bar 0x7f040000
+int id content 0x7f040001
+int layout main 0x7f020000
