@@ -26,6 +26,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
+import android.widget.RelativeLayout.LayoutParams;
 
 /**
  * Activity's framework,the developer shouldn't extends it<br>
@@ -137,12 +138,18 @@ public abstract class FrameActivity extends FragmentActivity implements
 				setContentView(fullScreenLayoutId);
 				mBar = (RelativeLayout) findViewById(R.id.bar);
 				mContent = (RelativeLayout) findViewById(R.id.content);
+				RelativeLayout.LayoutParams lp = new LayoutParams(
+						RelativeLayout.LayoutParams.MATCH_PARENT,
+						RelativeLayout.LayoutParams.MATCH_PARENT);
 				if (layout.barId() != -1) {
-					mBar.addView(getLayoutInflater().inflate(layout.barId(),
-							null));
+					mBar.addView(
+							getLayoutInflater().inflate(layout.barId(), null),
+							lp);
+
 				}
-				mContent.addView(getLayoutInflater().inflate(
-						layout.contentId(), null));
+				mContent.addView(
+						getLayoutInflater().inflate(layout.contentId(), null),
+						lp);
 			} else
 				setContentView(layout.contentId());
 		} else

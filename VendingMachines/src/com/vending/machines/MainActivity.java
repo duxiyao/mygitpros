@@ -5,6 +5,7 @@ import org.myframe.MActivity;
 import com.baidu.location.BDLocation;
 import com.vending.machines.act.ChoiceAct;
 import com.vending.machines.act.OuttingRiceAct;
+import com.vending.machines.act.PayAct;
 import com.vending.machines.util.maputil.MapLocation;
 import com.vending.machines.util.maputil.MapLocation.LocationListener;
 
@@ -23,7 +24,9 @@ public class MainActivity extends MActivity {
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		super.onCreate(savedInstanceState);
-		startActivity(new Intent(this,ChoiceAct.class));
+//		startActivity(new Intent(this,ChoiceAct.class));
+//		startActivity(new Intent(this,OuttingRiceAct.class));
+		startActivity(new Intent(this,PayAct.class));
 //		MapLocation.getInstance().setLLis(new LocationListener() {
 //
 //			@Override

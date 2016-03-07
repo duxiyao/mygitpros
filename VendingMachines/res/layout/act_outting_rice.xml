@@ -5,27 +5,27 @@
     android:background="@android:color/white"
     android:gravity="center" >
 
-    <LinearLayout
+    <com.vending.machines.plugin.ProgressLoading
+        android:id="@+id/pl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_200"
+        android:layout_marginRight="@dimen/dp_200" />
 
-        <com.vending.machines.plugin.ProgressLoading
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_50"
-            android:layout_marginRight="@dimen/dp_50" />
+    <TextView
+        android:id="@+id/tv_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pl"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="支付完成，正在出货"
+        android:textColor="@color/color_535353"
+        android:textSize="@dimen/txt_19" />
 
-        <TextView
-            android:id="@+id/tv_sum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:layout_marginTop="@dimen/dp_30"
-            android:text="支付完成，正在出货"
-            android:textColor="@color/color_535353"
-            android:textSize="@dimen/txt_15" />
-    </LinearLayout>
 
 </RelativeLayout>

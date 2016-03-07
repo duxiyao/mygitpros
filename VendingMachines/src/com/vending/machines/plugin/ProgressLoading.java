@@ -12,6 +12,9 @@ public class ProgressLoading extends View {
 	private int pos = 0;
 	private boolean flag = true;
 	private int width;
+	private int len=200;
+	private int height=5;
+	private int raidus=10;
 
 	public ProgressLoading(Context context) {
 		super(context);
@@ -37,7 +40,7 @@ public class ProgressLoading extends View {
 					pos += 5;
 					if (width != 0 && pos > width) {
 
-						pos = -500;
+						pos = -len;
 					}
 					postInvalidate();
 					try {
@@ -52,7 +55,7 @@ public class ProgressLoading extends View {
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		setMeasuredDimension(widthMeasureSpec, 15);
+		setMeasuredDimension(widthMeasureSpec, height);
 	}
 
 	@Override
@@ -60,8 +63,8 @@ public class ProgressLoading extends View {
 		super.onDraw(canvas);
 		Paint paint = new Paint();
 		paint.setColor(Color.BLUE);
-		RectF rect = new RectF(pos, 0, pos + 500, 15);
-		canvas.drawRoundRect(rect, 25, 25, paint);
+		RectF rect = new RectF(pos, 0, pos + len, height);
+		canvas.drawRoundRect(rect, raidus, raidus, paint);
 	}
 
 	@Override

@@ -14,6 +14,10 @@ import com.dwin.dwinapi.MySerialPort;
 import com.dwin.dwinapi.OnReceSerialPortData;
 import com.vending.machines.R;
 
+/**
+ * @author Administrator
+ * 首页，选择商品
+ */
 @BindLayout(barId = R.layout.bar_txt_btn, contentId = R.layout.act_choice)
 public class ChoiceAct extends MActivity {
 

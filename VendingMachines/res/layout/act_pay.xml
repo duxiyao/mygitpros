@@ -7,36 +7,47 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_15"
-        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_55"
+        android:layout_marginTop="@dimen/dp_20"
         android:text="@string/s_pay_tips"
         android:textColor="@color/color_565656"
-        android:textSize="@dimen/txt_19" />
+        android:textSize="@dimen/txt_28" />
 
-    <LinearLayout
-        android:id="@+id/ll_payway"
+    <RelativeLayout
+        android:id="@+id/rl_payway"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_marginBottom="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_65"
-        android:background="@android:color/black"
-        android:orientation="horizontal" >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_80" >
 
         <ImageView
-            android:layout_width="0dp"
+            android:id="@+id/iv_pay_zfb"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:background="@drawable/shape_select_frame"
+            android:src="@drawable/icon_pay_zfb" />
 
         <ImageView
-            android:layout_width="0dp"
+            android:id="@+id/iv_pay_wechat"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_unselect_frame"
+            android:src="@drawable/icon_pay_wechat" />
 
         <ImageView
-            android:layout_width="0dp"
+            android:id="@+id/iv_pay_hyk"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_50"
+            android:background="@drawable/shape_unselect_frame"
+            android:src="@drawable/icon_pay_hyk" />
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/iv_qrcode"
@@ -49,13 +60,13 @@
     <TextView
         android:id="@+id/tv_scan_pay"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:textSize="@dimen/txt_18"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_30"
         android:background="@drawable/shpae_round_corner_frame"
+        android:text="支付宝扫描支付"
         android:textColor="@color/color_DE0000"
-        android:layout_margin="@dimen/dp_15"
-        android:text="支付宝扫描支付"/>
+        android:textSize="@dimen/txt_21" />
 
 </RelativeLayout>

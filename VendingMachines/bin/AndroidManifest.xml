@@ -127,6 +127,12 @@
             android:name="com.vending.machines.act.OuttingRiceAct"
             android:screenOrientation="landscape" >
         </activity>
+        <activity
+            android:name="com.vending.machines.act.PayAct"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <service android:name="com.vending.machines.vendingservice.CoreService" />
     </application>
 
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />

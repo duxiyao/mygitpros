@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/layout_outting_rice"
+        layout="@layout/act_outting_rice"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_outting_success"
+        layout="@layout/act_outting_success"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_outting_failed"
+        layout="@layout/act_outting_failed"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_nothing"
+        layout="@layout/act_nothing" />
+
+</LinearLayout>

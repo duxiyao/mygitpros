@@ -17,33 +17,33 @@ public final class R {
 	}
 	public static final class drawable {
 		public static final int ic_launcher = 0x7f020000;
-		public static final int mm_title_back_btn = 0x7f020003;
-		public static final int mm_title_back_focused = 0x7f020004;
-		public static final int mm_title_back_normal = 0x7f020005;
-		public static final int mm_title_back_pressed = 0x7f020006;
-		public static final int mm_title_btn_focused = 0x7f020007;
-		public static final int mm_title_btn_menu_normal = 0x7f020008;
-		public static final int mm_title_btn_normal = 0x7f020009;
-		public static final int mm_title_btn_pressed = 0x7f02000a;
-		public static final int mm_title_right_btn = 0x7f02000b;
-		public static final int mmtitle_bg_alpha = 0x7f02000c;
-		public static final int qrcode_scan_line = 0x7f02000d;
-		public static final int scan_capture_back = 0x7f02000f;
-		public static final int scan_ui_mycode = 0x7f020010;
+		public static final int mm_title_back_btn = 0x7f02000a;
+		public static final int mm_title_back_focused = 0x7f02000b;
+		public static final int mm_title_back_normal = 0x7f02000c;
+		public static final int mm_title_back_pressed = 0x7f02000d;
+		public static final int mm_title_btn_focused = 0x7f02000e;
+		public static final int mm_title_btn_menu_normal = 0x7f02000f;
+		public static final int mm_title_btn_normal = 0x7f020010;
+		public static final int mm_title_btn_pressed = 0x7f020011;
+		public static final int mm_title_right_btn = 0x7f020012;
+		public static final int mmtitle_bg_alpha = 0x7f020013;
+		public static final int qrcode_scan_line = 0x7f020014;
+		public static final int scan_capture_back = 0x7f020016;
+		public static final int scan_ui_mycode = 0x7f020017;
 	}
 	public static final class id {
-		public static final int include1 = 0x7f0b0014;
-		public static final int preview_view = 0x7f0b0011;
-		public static final int scan_ui_back = 0x7f0b0015;
-		public static final int scan_ui_mycode = 0x7f0b0013;
-		public static final int scan_ui_photo = 0x7f0b0017;
-		public static final int scan_ui_title = 0x7f0b0016;
-		public static final int viewfinder_view = 0x7f0b0012;
+		public static final int include1 = 0x7f0b0023;
+		public static final int preview_view = 0x7f0b0020;
+		public static final int scan_ui_back = 0x7f0b0024;
+		public static final int scan_ui_mycode = 0x7f0b0022;
+		public static final int scan_ui_photo = 0x7f0b0026;
+		public static final int scan_ui_title = 0x7f0b0025;
+		public static final int viewfinder_view = 0x7f0b0021;
 	}
 	public static final class layout {
-		public static final int activity_main = 0x7f030003;
-		public static final int scan_capture = 0x7f030009;
-		public static final int scan_title = 0x7f03000a;
+		public static final int activity_main = 0x7f030007;
+		public static final int scan_capture = 0x7f03000d;
+		public static final int scan_title = 0x7f03000e;
 	}
 	public static final class raw {
 		public static final int beep = 0x7f050000;
