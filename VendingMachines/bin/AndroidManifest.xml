@@ -131,6 +131,20 @@
             android:name="com.vending.machines.act.PayAct"
             android:screenOrientation="landscape" >
         </activity>
+        <activity
+            android:name="com.vending.machines.act.OrderPwdObtainRiceAct"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.vending.machines.act.AdminLoginAct"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.vending.machines.act.ConfirmFillRiceAct"
+            android:screenOrientation="landscape" >
+        </activity>
 
         <service android:name="com.vending.machines.vendingservice.CoreService" />
     </application>

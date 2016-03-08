@@ -11,10 +11,10 @@ public final class R {
 		public static final int dp_60 = 0x7f060000;
 	}
 	public static final class id {
-		public static final int bar = 0x7f0b001e;
-		public static final int content = 0x7f0b001f;
+		public static final int bar = 0x7f0b0026;
+		public static final int content = 0x7f0b0027;
 	}
 	public static final class layout {
-		public static final int main = 0x7f03000c;
+		public static final int main = 0x7f030012;
 	}
 }

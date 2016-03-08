@@ -4,6 +4,6 @@
     <string name="app_name">VendingMachines</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
     <string name="s_pay_tips">您共消费¥1234.4，请选择支付方式</string>
+
 </resources>

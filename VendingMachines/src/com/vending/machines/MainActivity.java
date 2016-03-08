@@ -2,17 +2,14 @@ package com.vending.machines;
 
 import org.myframe.MActivity;
 
-import com.baidu.location.BDLocation;
-import com.vending.machines.act.ChoiceAct;
-import com.vending.machines.act.OuttingRiceAct;
-import com.vending.machines.act.PayAct;
-import com.vending.machines.util.maputil.MapLocation;
-import com.vending.machines.util.maputil.MapLocation.LocationListener;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.vending.machines.act.AdminLoginAct;
+import com.vending.machines.act.ConfirmFillRiceAct;
+import com.vending.machines.act.OrderPwdObtainRiceAct;
 
 public class MainActivity extends MActivity {
 
@@ -24,16 +21,19 @@ public class MainActivity extends MActivity {
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		super.onCreate(savedInstanceState);
-//		startActivity(new Intent(this,ChoiceAct.class));
-//		startActivity(new Intent(this,OuttingRiceAct.class));
-		startActivity(new Intent(this,PayAct.class));
-//		MapLocation.getInstance().setLLis(new LocationListener() {
-//
-//			@Override
-//			public void onReceiveLocation(BDLocation location) {
-//				String s="";
-//			}
-//		}).startLocation();
+		startActivity(new Intent(this, ConfirmFillRiceAct.class));
+		// startActivity(new Intent(this,AdminLoginAct.class));
+		// startActivity(new Intent(this,OrderPwdObtainRiceAct.class));
+		// startActivity(new Intent(this,ChoiceAct.class));
+		// startActivity(new Intent(this,OuttingRiceAct.class));
+		// startActivity(new Intent(this,PayAct.class));
+		// MapLocation.getInstance().setLLis(new LocationListener() {
+		//
+		// @Override
+		// public void onReceiveLocation(BDLocation location) {
+		// String s="";
+		// }
+		// }).startLocation();
 		// Dwin.getInstance().hideNavigation();
 		// Dwin.getInstance().showNavigation();
 		// new Thread(new Runnable() {
