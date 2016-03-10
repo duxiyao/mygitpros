@@ -108,6 +108,7 @@
                 <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
                 <!-- 接收网络变化 连接/断开 since 1.6.3 -->
                 <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
 
                 <category android:name="com.vending.machines" />
             </intent-filter>
@@ -146,7 +147,9 @@
             android:screenOrientation="landscape" >
         </activity>
 
-        <service android:name="com.vending.machines.vendingservice.CoreService" />
+        <service
+            android:name="com.vending.machines.vendingservice.CoreService"
+            android:enabled="true" />
     </application>
 
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />

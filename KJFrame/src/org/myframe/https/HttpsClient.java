@@ -65,6 +65,12 @@ public class HttpsClient {
 		return this;
 	}
 
+	public void clearEvn() {
+		mUrl = "";
+		isPost = true;
+		mParams.clear();
+	}
+
 	private SSLContext initCertificate() throws Exception {
 		// 设置SSLContext
 		SSLContext sslcontext = SSLContext.getInstance("TLS");
@@ -164,9 +170,11 @@ public class HttpsClient {
 		try {
 			if (!NetUtil.isConnected()) {
 				ViewInject.toast("找不到网络了...");
+				cb.onError("找不到网络了...",null);
 				return;
 			}
 		} catch (Exception e) {
+			cb.onError("error", null);
 			return;
 		}
 		if (mSslContext == null) {
@@ -175,6 +183,7 @@ public class HttpsClient {
 			} catch (Exception e) {
 				e.printStackTrace();
 				ViewInject.toast("init ssl failed");
+				cb.onError("error", null);
 				return;
 			}
 		}
@@ -187,11 +196,13 @@ public class HttpsClient {
 				String data = parseResponse(conn.getInputStream());
 				MLoger.debug("response data-->" + data);
 				if (cb != null)
-					cb.onResponse(data);
+					cb.onResponse(data, null);
 			} else {
 				MLoger.debug("error httpcode-->" + code);
+				cb.onError("error httpcode", null);
 			}
 		} catch (Exception e) {
+			cb.onError("error", null);
 			e.printStackTrace();
 		}
 	}

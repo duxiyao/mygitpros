@@ -8,10 +8,12 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.vending.machines.act.AdminLoginAct;
+import com.vending.machines.act.BaseAct;
 import com.vending.machines.act.ConfirmFillRiceAct;
 import com.vending.machines.act.OrderPwdObtainRiceAct;
+import com.vending.machines.vendingservice.CoreService;
 
-public class MainActivity extends MActivity {
+public class MainActivity extends BaseAct {
 
 	private static final String TAG = "MainActivity";
 
@@ -21,6 +23,7 @@ public class MainActivity extends MActivity {
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		super.onCreate(savedInstanceState);
+		startService(new Intent(this, CoreService.class));
 		startActivity(new Intent(this, ConfirmFillRiceAct.class));
 		// startActivity(new Intent(this,AdminLoginAct.class));
 		// startActivity(new Intent(this,OrderPwdObtainRiceAct.class));

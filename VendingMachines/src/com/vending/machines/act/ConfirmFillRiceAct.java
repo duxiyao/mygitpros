@@ -6,6 +6,6 @@ import org.myframe.ui.BindLayout;
 import com.vending.machines.R;
 
 @BindLayout(barId = R.layout.bar_txt_btn, contentId = R.layout.act_confirm_fill_rice)
-public class ConfirmFillRiceAct extends MActivity {
+public class ConfirmFillRiceAct extends BaseAct {
 
 }

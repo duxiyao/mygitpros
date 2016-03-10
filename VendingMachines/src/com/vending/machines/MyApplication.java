@@ -1,5 +1,6 @@
 package com.vending.machines;
 
+import org.myframe.https.HttpsDispatch;
 import org.myframe.utils.MLoger;
 
 import android.app.Application;
@@ -17,11 +18,13 @@ public class MyApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		
 		MLoger.DEBUG_LOG = true;
 		MLoger.debug("start"); 
 		mInstance = this;
 		JPushInterface.setDebugMode(false);
 		JPushInterface.init(this);
+		
 	}
 
 	@Override
