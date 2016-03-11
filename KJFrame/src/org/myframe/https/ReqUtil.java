@@ -24,12 +24,16 @@ public class ReqUtil {
 				if (conf != null) {
 					String url = conf.serverHost() + conf.surffix();
 					boolean isPost = conf.isPost();
+					int reReqCount = conf.reReqCount();
+					int interval = conf.reReqInterval();
 					try {
 						field.setAccessible(true);
 						RequestBean rb = new RequestBean(
 								(HttpsCb) field.get(mContext));
 						rb.setServerAddr(url);
 						rb.setPost(isPost);
+						rb.setReReqCount(reReqCount);
+						rb.setNextInterval(interval);
 						if (params == null)
 							params = new HashMap<String, String>();
 						rb.setParams(params);

@@ -7,6 +7,11 @@ public class RequestBean implements Comparable<RequestBean> {
 	private HashMap<String, String> params;
 	private HttpsCb cb;
 	private boolean isPost = true;
+	private int mReReqCount = 3;
+	private int mCurReqCount = 0;
+	private long mNextReqTime;
+	private int mNextReqInterval;
+	private boolean isCancle = false;
 
 	public RequestBean(HttpsCb cb) {
 		this.cb = cb;
@@ -38,6 +43,38 @@ public class RequestBean implements Comparable<RequestBean> {
 
 	public void setPost(boolean isPost) {
 		this.isPost = isPost;
+	}
+
+	public void setReReqCount(int count) {
+		mReReqCount = count;
+	}
+
+	public void setNextInterval(int millis) {
+		mNextReqInterval = millis;
+	}
+
+	public boolean isCancle() {
+		return isCancle;
+	}
+
+	public void setCancle(boolean isCancle) {
+		this.isCancle = isCancle;
+	}
+
+	/**
+	 * @return -1 还没到时间; 0 这是最后一次; 1执行完这次请求还有下次
+	 */
+	public int isReq() {
+		if (mCurReqCount <= mReReqCount
+				&& System.currentTimeMillis() >= mNextReqTime) {
+			mCurReqCount++;
+			if (mCurReqCount > mReReqCount) {
+				return 0;
+			}
+			mNextReqTime = System.currentTimeMillis() + mNextReqInterval * 1000;
+			return 1;
+		} else
+			return -1;
 	}
 
 	@Override

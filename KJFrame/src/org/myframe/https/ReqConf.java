@@ -13,4 +13,14 @@ public @interface ReqConf {
 	public String surffix();
 
 	public boolean isPost() default true;
+	/**
+	 * 次 
+	 * @return
+	 */
+	public int reReqCount() default 10;
+	/**
+	 * 秒
+	 * @return
+	 */
+	public int reReqInterval() default 60;
 }

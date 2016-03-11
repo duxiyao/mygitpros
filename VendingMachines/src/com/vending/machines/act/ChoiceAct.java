@@ -19,7 +19,7 @@ import com.vending.machines.R;
  * 首页，选择商品
  */
 @BindLayout(barId = R.layout.bar_txt_btn, contentId = R.layout.act_choice)
-public class ChoiceAct extends MActivity {
+public class ChoiceAct extends BaseAct {
 
 	@BindView(id = R.id.btn_obtain)
 	private Button mObtainBtn;
@@ -27,24 +27,24 @@ public class ChoiceAct extends MActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		MySerialPort.getDefault().setOnRecePortData(new OnReceSerialPortData() {
-
-			@Override
-			public void onReceive(String datas) {
-				 System.out.println("---->"+datas);
-			}
-
-			@Override
-			public void onError(String ermsg, String datas) {
-				System.out.println("OnReceSerialPortData.onError");
-			}
-		});
-		mObtainBtn.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				MySerialPort.getDefault().queryRiceLeft();
-			}
-		});
+//		MySerialPort.getDefault().setOnRecePortData(new OnReceSerialPortData() {
+//
+//			@Override
+//			public void onReceive(String datas) {
+//				 System.out.println("---->"+datas);
+//			}
+//
+//			@Override
+//			public void onError(String ermsg, String datas) {
+//				System.out.println("OnReceSerialPortData.onError");
+//			}
+//		});
+//		mObtainBtn.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				MySerialPort.getDefault().queryRiceLeft();
+//			}
+//		});
 	}
 }

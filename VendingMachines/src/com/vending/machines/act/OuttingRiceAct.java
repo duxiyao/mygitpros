@@ -12,6 +12,6 @@ import com.vending.machines.R;
  * @author Administrator 支付成功，正在出货
  */
 @BindLayout(barId = R.layout.bar_txt_ivback, contentId = R.layout.act_outting)
-public class OuttingRiceAct extends MActivity {
+public class OuttingRiceAct extends BaseAct {
 
 }

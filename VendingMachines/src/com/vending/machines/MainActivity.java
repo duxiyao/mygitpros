@@ -9,6 +9,7 @@ import android.view.WindowManager;
 
 import com.vending.machines.act.AdminLoginAct;
 import com.vending.machines.act.BaseAct;
+import com.vending.machines.act.ChoiceAct;
 import com.vending.machines.act.ConfirmFillRiceAct;
 import com.vending.machines.act.OrderPwdObtainRiceAct;
 import com.vending.machines.vendingservice.CoreService;
@@ -24,10 +25,10 @@ public class MainActivity extends BaseAct {
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		super.onCreate(savedInstanceState);
 		startService(new Intent(this, CoreService.class));
-		startActivity(new Intent(this, ConfirmFillRiceAct.class));
+//		startActivity(new Intent(this, ConfirmFillRiceAct.class));
 		// startActivity(new Intent(this,AdminLoginAct.class));
 		// startActivity(new Intent(this,OrderPwdObtainRiceAct.class));
-		// startActivity(new Intent(this,ChoiceAct.class));
+		 startActivity(new Intent(this,ChoiceAct.class));
 		// startActivity(new Intent(this,OuttingRiceAct.class));
 		// startActivity(new Intent(this,PayAct.class));
 		// MapLocation.getInstance().setLLis(new LocationListener() {
@@ -63,6 +64,7 @@ public class MainActivity extends BaseAct {
 		// SpeechUtil.getInstance().speak("钟瑞林3");
 		// }
 		// }, 2000);
+		 finish();
 
 	}
 

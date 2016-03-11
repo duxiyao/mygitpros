@@ -113,17 +113,18 @@ public class CoreService extends Service implements OnReceSerialPortData {
 
 	}
 
-	@ReqConf(surffix = "/api/device/register")
+	@ReqConf(surffix = "/api/device/register",reReqInterval=300)
 	private HttpsCb registerCb = new HttpsCb() {
 
 		@Override
 		public void onResponse(String data, RequestBean rb) {
-
+			System.out.println("registerCb-->onResponse");
 		}
 
 		@Override
 		public void onError(String error, RequestBean rb) {
-
+			System.out.println("registerCb-->onError");
 		}
 	};
+
 }
